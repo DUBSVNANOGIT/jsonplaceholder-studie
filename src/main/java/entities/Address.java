@@ -5,16 +5,14 @@ public class Address {
     private String suite;
     private String city;
     private String zipcode;
-    private double lat;
-    private double lnt;
+    private Geo geo;
 
     public Address(String street, String suite, String city, String zipcode, double lat, double lnt) {
         this.street = street;
         this.suite = suite;
         this.city = city;
         this.zipcode = zipcode;
-        this.lat = lat;
-        this.lnt = lnt;
+        this.geo = new Geo(lat, lnt);
     }
 
     public String getStreet() {
@@ -49,20 +47,5 @@ public class Address {
         this.zipcode = zipcode;
     }
 
-    public double getLat() {
-        return lat;
-    }
-
-    public void setLat(double lat) {
-        this.lat = lat;
-    }
-
-    public double getLnt() {
-        return lnt;
-    }
-
-    public void setLnt(double lnt) {
-        this.lnt = lnt;
-    }
 }
 
